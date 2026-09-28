@@ -2,23 +2,24 @@
 
 Companion code for my talk at **PyCon Cameroon 2026** (Yaoundé).
 
-Most of us learn Matplotlib for formalities — plotting a graph, drawing a
+Most of us learn Matplotlib for formalities; plotting a graph, drawing a
 bar chart, getting an assignment done. This repo walks through the same
-demo shown in the talk: one dataset, transformed step by step from a
+demo shown in the talk: Creative codding with Matplotlib: Turning data into
+art. One dataset, transformed step by step from a
 default `ax.bar()` chart into something intentional.
 
 > Making something beautiful is a legitimate reason to write code.
 
 ## What's in here
 
-The demo takes a single dataset — **Yaoundé's average monthly temperature
-and rainfall** (WorldClim climate normals, 1970–2000) — and applies one
+The demo takes a single dataset: **Yaoundé's average monthly temperature
+and rainfall** (WorldClim climate normals, 1970–2000) and applies one
 change at a time:
 
 | Step | What happens | Script |
 |---|---|---|
 | 1 — The honest default | `ax.bar()` once: default blue, boxed spines, full grid, generic title | `src/step1_the_default.py` |
-| 2 — Strip the defaults | Remove the spines, quiet the grid — and swap the rectangle for a circle (`projection="polar"`) | `src/step2_strip_defaults.py` |
+| 2 — Strip the defaults | Remove the spines, quiet the grid and swap the rectangle for a circle (`projection="polar"`) | `src/step2_strip_defaults.py` |
 | 3 — Choose intentionally | Color mapped straight from temperature (cool blue → warm orange) on a dark canvas | `src/step3_choose_intentionally.py` |
 | 4 — Let the shape follow the data | Bars become petals: one small `petal()` function, called once per month | `src/step4_shape_follows_data.py` |
 | 5 — Compose the page | Rainfall as a second, translucent layer of petals, plus a title in the middle of the bloom | `src/step5_compose_the_page.py` |
@@ -152,10 +153,10 @@ data, or reuse the pattern on their own charts.
 
 The values in `src/data.py` are Yaoundé's climate normals (WorldClim,
 1970–2000) as tabulated by populationreview.org, rounded to whole degrees
-and millimetres — good for a demo, not a substitute for the original
+and millimetres, good for a demo, not a substitute for the original
 dataset. For a similarly-sourced, independently verifiable dataset, see
 the UEA Climatic Research Unit's Cameroon page (the one linked on the data slide).
 
 ## License
 
-MIT — reuse the code, the pattern, or the whole demo freely.
+MIT reuse the code, the pattern, or the whole demo freely.
